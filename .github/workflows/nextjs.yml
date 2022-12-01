@@ -1,6 +1,7 @@
 
 name: Deploy to Github Pages
-
+env:
+  NODE_OPTIONS: --openssl-legacy-provider
 on:
   push:
     branches:
