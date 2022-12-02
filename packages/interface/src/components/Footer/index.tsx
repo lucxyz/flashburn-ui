@@ -21,12 +21,6 @@ function Footer(): JSX.Element {
       align={{ base: "center", md: "center" }}
     >
       <Box>
-        Sponsored by{" "}
-        <Link href="https://twitter.com/snxgrants" isExternal>
-          <Text as="u">grantsDAO</Text>
-        </Link>
-      </Box>
-      <Box>
         <Link href="https://github.com/snxgrants/flashburn" isExternal>
           <Text as="u">GitHub</Text>
         </Link>{" "}
