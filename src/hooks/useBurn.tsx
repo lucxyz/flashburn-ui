@@ -1,10 +1,10 @@
 import { useState, useMemo, useCallback, useEffect } from "react";
 import { ethers, BigNumber, Signer } from "ethers";
-import { addresses } from "../../constants";
+import { addresses } from "@snx-flash-tool/contracts/constants";
 import {
   SNXFlashLoanTool,
   SNXFlashLoanTool__factory,
-} from "../../types";
+} from "@snx-flash-tool/contracts/types";
 import { useToast, Box, Text } from "@chakra-ui/react";
 import useSynthetix from "./useSynthetix";
 import useWeb3React from "./useWeb3React";
