@@ -24,7 +24,7 @@ export const addresses: {
     addressResolver: "0x95A6a3f44a70172E7d50a9e28c85Dfd712756B8C",
     lendingPoolAddressesProvider: "0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb",
     oneInch: "0x1111111254760F7ab3F16433eea9304126DCd199",
-    snxFlashTool: "0x8c3FFD1630beDde24d06b1931B54D45bACe0E226",
+    snxFlashTool: "0x1b2FB67d5E30A458E320401388E1E20DCc5C707a",
   },
   1337: {
     explorer: "https://etherscan.io/",
