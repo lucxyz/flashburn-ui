@@ -1,41 +1,41 @@
 {
-  "name": "flashburn-ui",
-  "version": "1.0.1",
   "private": true,
+  "name": "snx-flash-tool",
+  "author": "Gautham Ganesh Elango <gautham.gg@gmail.com> (https://github.com/gg2001)",
+  "version": "1.0.1",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snxgrants/flashburn.git"
+  },
   "scripts": {
-    "dev": "next dev",
-    "export": "next export",
-    "build": "yarn run typechain && next build",
-    "start": "next start",
-    "lint": "next lint --ignore-path ./.eslintignore",
-    "prettier": "prettier --write . --ignore-path .prettierignore",
-    "typechain": "typechain --target ethers-v5 --out-dir ./src/types/typechain './contracts/*.json'"
+    "clean": "yarn workspaces run clean",
+    "clean:contracts": "yarn workspace @snx-flash-tool/contracts clean",
+    "build": "yarn run build:contracts && next build packages/interface",
+    "build:contracts": "yarn workspace @snx-flash-tool/contracts build",
+    "build:interface": "yarn workspace @snx-flash-tool/interface build",
+    "dev": "next dev packages/interface",
+    "dev:interface": "yarn workspace @snx-flash-tool/interface dev",
+    "test": "yarn workspaces run test",
+    "test:contracts": "yarn workspace @snx-flash-tool/contracts test",
+    "prettier": "yarn workspaces run prettier",
+    "prettier:contracts": "yarn workspace @snx-flash-tool/contracts prettier",
+    "prettier:interface": "yarn workspace @snx-flash-tool/interface prettier",
+    "lint": "yarn workspaces run lint",
+    "lint:contracts": "yarn workspace @snx-flash-tool/contracts lint",
+    "lint:interface": "yarn workspace @snx-flash-tool/interface lint",
+    "evm:contracts": "yarn workspace @snx-flash-tool/contracts evm",
+    "migrate:contracts": "yarn workspace @snx-flash-tool/contracts migrate",
+    "export:interface": "yarn workspace @snx-flash-tool/interface export",
+    "start": "next start packages/interface"
   },
-  "dependencies": {
-    "@chakra-ui/icons": "^1.0.14",
-    "@chakra-ui/react": "^1.6.5",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11",
-    "@walletconnect/web3-provider": "^1.5.0",
-    "axios": "^0.21.1",
-    "ethers": "^5.4.2",
-    "framer-motion": "^4",
-    "next": "^11.0.1",
-    "next-transpile-modules": "^8.0.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "web3modal": "^1.9.3"
-  },
-  "devDependencies": {
-    "@typechain/ethers-v5": "^7.0.1",
-    "@types/react": "17.0.13",
-    "@typescript-eslint/eslint-plugin": "^4.28.5",
-    "@typescript-eslint/parser": "^4.28.5",
-    "eslint": "7.31.0",
-    "eslint-config-next": "11.0.1",
-    "eslint-config-prettier": "^8.3.0",
-    "prettier": "^2.3.2",
-    "typechain": "^5.1.2",
-    "typescript": "4.3.5"
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/hardhat",
+      "**/hardhat/**"
+    ]
   }
 }
