@@ -105,7 +105,7 @@ function AmountInput({
                     label="Any extra sUSD received will be automatically sent back to you after burning"
                     aria-label="Info"
                   >
-                    <InfoOutlineIcon marginBottom="0.5" size="xs" />
+                    <InfoOutlineIcon marginBottom="0.5" />
                   </Tooltip>
                 </>
               ) : (

@@ -736,6 +736,742 @@
       "artifacts": [
         "IDelegateApprovals"
       ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/packages/contracts/contracts/interfaces/IFlashLoanReceiver.sol": {
+      "lastModificationDate": 1669960738824,
+      "contentHash": "4d21798970bff4226f39fc3286f67548",
+      "sourceName": "contracts/interfaces/IFlashLoanReceiver.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ILendingPoolAddressesProvider.sol",
+        "./ILendingPool.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.12"
+      ],
+      "artifacts": [
+        "IFlashLoanReceiver"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/packages/contracts/contracts/interfaces/ILendingPoolAddressesProvider.sol": {
+      "lastModificationDate": 1669960738824,
+      "contentHash": "88f2314db2a12de7ec067c18e3c7856b",
+      "sourceName": "contracts/interfaces/ILendingPoolAddressesProvider.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.12"
+      ],
+      "artifacts": [
+        "ILendingPoolAddressesProvider"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/packages/contracts/contracts/interfaces/ILendingPool.sol": {
+      "lastModificationDate": 1669960738824,
+      "contentHash": "a62006bfd72e67d17068030ed915af7e",
+      "sourceName": "contracts/interfaces/ILendingPool.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ILendingPoolAddressesProvider.sol",
+        "../libraries/DataTypes.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.12"
+      ],
+      "artifacts": [
+        "ILendingPool"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/packages/contracts/contracts/libraries/DataTypes.sol": {
+      "lastModificationDate": 1669960738824,
+      "contentHash": "112edd9026f4c883c068ac30b862e9e3",
+      "sourceName": "contracts/libraries/DataTypes.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.12"
+      ],
+      "artifacts": [
+        "DataTypes"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/packages/contracts/contracts/SNXFlashLoanTool.sol": {
+      "lastModificationDate": 1669960738824,
+      "contentHash": "abd11a686972931a02a4582ee1540bf4",
+      "sourceName": "contracts/SNXFlashLoanTool.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "synthetix/contracts/interfaces/IAddressResolver.sol",
+        "synthetix/contracts/interfaces/ISynthetix.sol",
+        "./interfaces/ISNXFlashLoanTool.sol",
+        "./interfaces/IFlashLoanReceiver.sol",
+        "./interfaces/ILendingPoolAddressesProvider.sol",
+        "./interfaces/ILendingPool.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.6"
+      ],
+      "artifacts": [
+        "SNXFlashLoanTool"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1669961911615,
+      "contentHash": "6748815a5b45c4aeeda56819f41190e0",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1669961912708,
+      "contentHash": "e0a41531d159d3a32f84b7a3ecf9fabb",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/node_modules/synthetix/contracts/interfaces/IAddressResolver.sol": {
+      "lastModificationDate": 1669961913111,
+      "contentHash": "ef17bb3c4c3d8e51ac5b7fdf2629fa74",
+      "sourceName": "synthetix/contracts/interfaces/IAddressResolver.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.24"
+      ],
+      "artifacts": [
+        "IAddressResolver"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/node_modules/synthetix/contracts/interfaces/ISynthetix.sol": {
+      "lastModificationDate": 1669961913111,
+      "contentHash": "d3d754be197663001ff57849b102f016",
+      "sourceName": "synthetix/contracts/interfaces/ISynthetix.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ISynth.sol",
+        "./IVirtualSynth.sol"
+      ],
+      "versionPragmas": [
+        ">=0.4.24"
+      ],
+      "artifacts": [
+        "ISynthetix"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/packages/contracts/contracts/interfaces/ISNXFlashLoanTool.sol": {
+      "lastModificationDate": 1669960738824,
+      "contentHash": "806a1c6e7d12b7c30aa486b77ba8769f",
+      "sourceName": "contracts/interfaces/ISNXFlashLoanTool.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.6"
+      ],
+      "artifacts": [
+        "ISNXFlashLoanTool"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/node_modules/@openzeppelin/contracts/token/ERC20/SafeERC20.sol": {
+      "lastModificationDate": 1669961912708,
+      "contentHash": "33e22842646d746e5c4124c2fdc051aa",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "../../math/SafeMath.sol",
+        "../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/node_modules/@openzeppelin/contracts/math/SafeMath.sol": {
+      "lastModificationDate": 1669961911618,
+      "contentHash": "e03e12206057e809eb76c5f681170c32",
+      "sourceName": "@openzeppelin/contracts/math/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1669961911618,
+      "contentHash": "2adbd82f6d055a4751566d4671512b03",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/node_modules/synthetix/contracts/interfaces/ISynth.sol": {
+      "lastModificationDate": 1669961913111,
+      "contentHash": "e94c6e6537c26780a11a850aed6c592f",
+      "sourceName": "synthetix/contracts/interfaces/ISynth.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.24"
+      ],
+      "artifacts": [
+        "ISynth"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/node_modules/synthetix/contracts/interfaces/IVirtualSynth.sol": {
+      "lastModificationDate": 1669961913111,
+      "contentHash": "017cc097b79dba03ae34733ab4899ee5",
+      "sourceName": "synthetix/contracts/interfaces/IVirtualSynth.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ISynth.sol"
+      ],
+      "versionPragmas": [
+        ">=0.4.24"
+      ],
+      "artifacts": [
+        "IVirtualSynth"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1669961911618,
+      "contentHash": "7aa46886ff5abe7515496208a5e2ce5a",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1669961912708,
+      "contentHash": "8065b340476f61365c076897199425f1",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/Context.sol",
+        "./IERC20.sol",
+        "../../math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/packages/contracts/contracts/interfaces/Imports.sol": {
+      "lastModificationDate": 1669960738824,
+      "contentHash": "0cfe970c6cb22a7b061de181d5ee636d",
+      "sourceName": "contracts/interfaces/Imports.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "synthetix/contracts/interfaces/IDelegateApprovals.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.6"
+      ],
+      "artifacts": []
+    },
+    "/home/lucy/Documents/Code/flashburn-ui/node_modules/synthetix/contracts/interfaces/IDelegateApprovals.sol": {
+      "lastModificationDate": 1669961913111,
+      "contentHash": "0fd140aef1394bc6167ce33a16d4eaa0",
+      "sourceName": "synthetix/contracts/interfaces/IDelegateApprovals.sol",
+      "solcConfig": {
+        "version": "0.7.6",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.24"
+      ],
+      "artifacts": [
+        "IDelegateApprovals"
+      ]
     }
   }
 }
