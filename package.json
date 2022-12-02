@@ -27,7 +27,8 @@
     "evm:contracts": "yarn workspace @snx-flash-tool/contracts evm",
     "migrate:contracts": "yarn workspace @snx-flash-tool/contracts migrate",
     "export:interface": "yarn workspace @snx-flash-tool/interface export",
-    "start": "next start packages/interface"
+    "start": "next start packages/interface",
+    "export": "next export packages/interface"
   },
   "workspaces": {
     "packages": [
