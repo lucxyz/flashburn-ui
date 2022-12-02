@@ -11,10 +11,10 @@
   "scripts": {
     "clean": "yarn workspaces run clean",
     "clean:contracts": "yarn workspace @snx-flash-tool/contracts clean",
-    "build": "yarn run build:contracts && next build packages/interface",
+    "build": "yarn run build:contracts && yarn build:interface",
     "build:contracts": "yarn workspace @snx-flash-tool/contracts build",
     "build:interface": "yarn workspace @snx-flash-tool/interface build",
-    "dev": "next dev packages/interface",
+    "dev": "yarn run dev:interface",
     "dev:interface": "yarn workspace @snx-flash-tool/interface dev",
     "test": "yarn workspaces run test",
     "test:contracts": "yarn workspace @snx-flash-tool/contracts test",
@@ -27,8 +27,8 @@
     "evm:contracts": "yarn workspace @snx-flash-tool/contracts evm",
     "migrate:contracts": "yarn workspace @snx-flash-tool/contracts migrate",
     "export:interface": "yarn workspace @snx-flash-tool/interface export",
-    "start": "next start packages/interface",
-    "export": "next export packages/interface"
+    "start": "yarn workspace @snx-flash-toool/interface start",
+    "export": "yarn run export:interface"
   },
   "workspaces": {
     "packages": [
