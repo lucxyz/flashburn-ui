@@ -28,10 +28,6 @@ function Footer(): JSX.Element {
         <Link href={etherscanContractAddress} isExternal>
           <Text as="u">Etherscan</Text>
         </Link>{" "}
-        • By{" "}
-        <Link href="https://twitter.com/GauthamGE" isExternal>
-          <Text as="u">@GauthamGE</Text>
-        </Link>
       </Box>
     </Container>
   );
