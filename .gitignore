@@ -1,6 +1,5 @@
 node_modules
-.next
-out
 .env
-gh-pages
-gh-pags.pub
+/gh-pages
+/gh-pages.pub
+.next
