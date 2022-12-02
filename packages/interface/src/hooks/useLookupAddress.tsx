@@ -13,7 +13,7 @@ function useLookupAddress(
     const fetchData = async () => {
       if (provider) {
         try {
-          const getName: string = await provider.lookupAddress(address);
+          const getName: string = await provider.lookupAddress(address) as string;
           if (getName) {
             setName(getName);
           } else {
