@@ -216,7 +216,8 @@ function useBurn(): Burn {
                   tradeSUSDAmount.toString(),
                   slippage
                 ),
-                  options
+                false,
+                options
               );
             if (oneInchTrade) {
               const sendSnxAmount: BigNumber = BigNumber.from(
