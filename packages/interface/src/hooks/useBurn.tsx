@@ -204,7 +204,7 @@ function useBurn(): Burn {
             }
             let options: object = { 
                   headers: {
-                    Authorization: 'Bearer ' + ONEINCH-KEY
+                    Authorization: 'Bearer ' + process.env.ONEINCH_KEY
                   }
             }
             const oneInchTrade: OneInchSwap | undefined =
