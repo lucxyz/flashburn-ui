@@ -203,7 +203,7 @@ function useBurn(): Burn {
           let searchCount: number = 0;
           let tradeSUSDAmount: BigNumber = sUSDSNXAmountBN;
           while (searching) {
-            if (searchCount > 15) {
+            if (searchCount > 100) {
               throw new Error("Search exceeded allowed iterations.");
             }
             const oneInchTrade: OneInchSwap | undefined =
