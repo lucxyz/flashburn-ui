@@ -105,7 +105,11 @@ function useBurn(): Burn {
     () => BigNumber.from((1000 + Number(slippage) * 10).toString()),
     [slippage]
   );
-
+  const options: object = { 
+                  headers: {
+                    Authorization: 'Bearer ' + process.env.ONEINCH_KEY
+                  }
+  };
   const rateForCurrencyString: string = rateForCurrency.toString();
   const snxUSDAmountBN: BigNumber = useMemo(
     () =>
@@ -201,11 +205,6 @@ function useBurn(): Burn {
           while (searching) {
             if (searchCount > 15) {
               throw new Error("Search exceeded allowed iterations.");
-            }
-            let options: object = { 
-                  headers: {
-                    Authorization: 'Bearer ' + process.env.ONEINCH_KEY
-                  }
             }
             const oneInchTrade: OneInchSwap | undefined =
               await cancellableRequest(
