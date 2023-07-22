@@ -46,7 +46,7 @@ export function fetchQuoteURL(
   toTokenAddress: string,
   amount: string
 ): string {
-  return `https://api.1inch.dev/${chainId}/quote?fromTokenAddress=${fromTokenAddress}&toTokenAddress=${toTokenAddress}&amount=${amount}`;
+  return `https://api.1inch.dev/swap/v5.2/${chainId}/quote?fromTokenAddress=${fromTokenAddress}&toTokenAddress=${toTokenAddress}&amount=${amount}`;
 }
 
 export function fetchSwapURL(
@@ -57,5 +57,5 @@ export function fetchSwapURL(
   amount: string,
   slippage: string
 ): string {
-  return `https://api.1inch.dev/swap/v5.2/${chainId}/swap?fromTokenAddress=${fromTokenAddress}&toTokenAddress=${toTokenAddress}&amount=${amount}&fromAddress=${fromAddress}&slippage=${slippage}&disableEstimate=true`;
+  return `https://api.1inch.dev/swap/v5.2/${chainId}/swap?fromTokenAddress=${fromTokenAddress}&toTokenAddress=${toTokenAddress}&amount=${amount}&fromAddress=${fromAddress}&slippage=${slippage}&disableEstimate=true&allowPartialFill=false`;
 }
