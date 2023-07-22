@@ -1,4 +1,4 @@
-noexport interface OneInchToken {
+export interface OneInchToken {
   address: string;
   decimals: number;
   logoURI: string;
