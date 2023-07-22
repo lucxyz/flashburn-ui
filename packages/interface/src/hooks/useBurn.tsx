@@ -202,11 +202,6 @@ function useBurn(): Burn {
             if (searchCount > 15) {
               throw new Error("Search exceeded allowed iterations.");
             }
-            let options: object = { 
-              headers: {
-                Authorization: 'Bearer ' + 1inchAPI-Token
-              }
-            }
             const oneInchTrade: OneInchSwap | undefined =
               await cancellableRequest(
                 fetchSwapURL(
