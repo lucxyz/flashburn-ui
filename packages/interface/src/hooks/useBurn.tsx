@@ -202,6 +202,11 @@ function useBurn(): Burn {
             if (searchCount > 15) {
               throw new Error("Search exceeded allowed iterations.");
             }
+            let options: object = { 
+                  headers: {
+                    Authorization: 'Bearer ' + ONEINCH-KEY
+                  }
+            }
             const oneInchTrade: OneInchSwap | undefined =
               await cancellableRequest(
                 fetchSwapURL(
@@ -212,7 +217,7 @@ function useBurn(): Burn {
                   tradeSUSDAmount.toString(),
                   slippage
                 ),
-                false
+                  options
               );
             if (oneInchTrade) {
               const sendSnxAmount: BigNumber = BigNumber.from(
