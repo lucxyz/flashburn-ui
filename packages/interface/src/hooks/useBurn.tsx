@@ -207,6 +207,11 @@ function useBurn(): Burn {
               throw new Error("Search exceeded allowed iterations.");
             }
             const oneInchTrade: OneInchSwap | undefined =
+              let options: object = { 
+                headers: {
+                  Authorization: 'Bearer ' + process.env.ONEINCH_KEY
+                }
+              }
               await cancellableRequest(
                 fetchSwapURL(
                   chainId === 1337 ? 1 : chainId,
