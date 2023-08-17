@@ -204,7 +204,7 @@ function useBurn(): Burn {
           let tradeSUSDAmount: BigNumber = sUSDSNXAmountBN;
           let options: object = { 
                 headers: {
-                  Authorization: 'Bearer ' + process.env.ONEINCH_KEY
+                  Authorization: 'Bearer ' + oneinchKey
                 }
               }
           while (searching) {
