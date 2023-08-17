@@ -202,16 +202,16 @@ function useBurn(): Burn {
           let searching: boolean = true;
           let searchCount: number = 0;
           let tradeSUSDAmount: BigNumber = sUSDSNXAmountBN;
+          let options: object = { 
+                headers: {
+                  Authorization: 'Bearer ' + process.env.ONEINCH_KEY
+                }
+              }
           while (searching) {
             if (searchCount > 100) {
               throw new Error("Search exceeded allowed iterations.");
             }
             const oneInchTrade: OneInchSwap | undefined =
-              let options: object = { 
-                headers: {
-                  Authorization: 'Bearer ' + process.env.ONEINCH_KEY
-                }
-              }
               await cancellableRequest(
                 fetchSwapURL(
                   chainId === 1337 ? 1 : chainId,
