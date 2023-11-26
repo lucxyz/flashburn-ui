@@ -64,6 +64,12 @@ export interface Burn {
 const approveBuffer: string = "1100";
 
 function useBurn(): Burn {
+  const options: AxiosRequestConfig = {
+    headers: {
+      'Authorization': 'Bearer ' + oneinchKey,
+      'accept': 'application/json'
+      }
+  }
   const toast = useToast();
   const { provider, chainId, address } = useWeb3React();
   const { balances, synthetixAddresses, fetchBalances } = useSynthetix();
@@ -219,12 +225,7 @@ function useBurn(): Burn {
                   slippage
                 ),
                 false,
-                {
-                  headers: {
-                  'Authorization': 'Bearer ' + oneinchKey,
-                  'accept': 'application/json'
-                  }
-                }
+                options
               );
             if (oneInchTrade) {
               const sendSnxAmount: BigNumber = BigNumber.from(
