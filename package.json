@@ -8,7 +8,6 @@
     "type": "git",
     "url": "https://github.com/snxgrants/flashburn.git"
   },
-  "proxy": "https://api.1inch.dev",
   "scripts": {
     "clean": "yarn workspaces run clean",
     "clean:contracts": "yarn workspace @snx-flash-tool/contracts clean",
@@ -28,7 +27,7 @@
     "evm:contracts": "yarn workspace @snx-flash-tool/contracts evm",
     "migrate:contracts": "yarn workspace @snx-flash-tool/contracts migrate",
     "export:interface": "yarn workspace @snx-flash-tool/interface export",
-    "start": "run-p yarn workspace @snx-flash-tool/interface start",
+    "start": "yarn workspace @snx-flash-tool/interface start",
     "export": "yarn run export:interface"
   },
   "workspaces": {
