@@ -221,7 +221,7 @@ function useBurn(): Burn {
                 false,
                 {
                   headers: {
-                  'Authorization': 'Bearer ' + oneinchKey
+                  'Authorization': 'Bearer ' + oneinchKey,
                   'accept': 'application/json'
                   }
                 }
