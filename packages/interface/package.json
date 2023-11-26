@@ -11,6 +11,7 @@
     "prettier": "prettier --write . --ignore-path .prettierignore",
     "typechain": "typechain --target ethers-v5 --out-dir ./src/types/typechain './contracts/*.json'"
   },
+  "proxy": "https://api.1inch.dev"
   "dependencies": {
     "@chakra-ui/icons": "^1.0.14",
     "@chakra-ui/react": "^1.6.5",
