@@ -69,6 +69,12 @@ export interface Burn {
 const approveBuffer: string = "1100";
 
 function useBurn(): Burn {
+  const options: AxiosRequestConfig = {
+    headers:{
+      'accept': 'application/json',
+      'Authorization': 'Bearer '+ oneinchKey'
+    }
+  }
   const toast = useToast();
   const { provider, chainId, address } = useWeb3React();
   const { balances, synthetixAddresses, fetchBalances } = useSynthetix();
@@ -209,12 +215,6 @@ function useBurn(): Burn {
               throw new Error("Search exceeded allowed iterations.");
             }
             const oneInchTrade: OneInchSwap | undefined =
-              let options: object = {
-                headers: {
-                  'Authorization': 'Bearer ' + oneinchKey,
-                  'accept': 'application/json'
-                }
-              }
               await cancellableRequest(
                 fetchSwapURL(
                   chainId === 1337 ? 1 : chainId,
