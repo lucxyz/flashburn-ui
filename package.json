@@ -4,6 +4,7 @@
   "author": "Gautham Ganesh Elango <gautham.gg@gmail.com> (https://github.com/gg2001)",
   "version": "1.0.1",
   "license": "GPL-3.0",
+  "proxy": "https://api.1inch.dev"
   "repository": {
     "type": "git",
     "url": "https://github.com/snxgrants/flashburn.git"
