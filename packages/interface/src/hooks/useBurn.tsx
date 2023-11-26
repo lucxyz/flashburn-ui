@@ -112,11 +112,6 @@ function useBurn(): Burn {
     () => BigNumber.from((1000 + Number(slippage) * 10).toString()),
     [slippage]
   );
-  const options: object = { 
-                  headers: {
-                    Authorization: 'Bearer ' + process.env.ONEINCH_KEY
-                  }
-  };
   const rateForCurrencyString: string = rateForCurrency.toString();
   const snxUSDAmountBN: BigNumber = useMemo(
     () =>
