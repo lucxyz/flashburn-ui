@@ -1,6 +1,11 @@
 import { useState, useMemo, useCallback, useEffect } from "react";
 import { ethers, BigNumber, Signer } from "ethers";
 import { addresses } from "@snx-flash-tool/contracts/constants";
+import axios, {
+  AxiosResponse,
+  AxiosRequestConfig,
+  CancelTokenSource,
+} from "axios";
 import {
   SNXFlashLoanTool,
   SNXFlashLoanTool__factory,
