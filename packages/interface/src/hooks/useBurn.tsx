@@ -64,7 +64,7 @@ export interface Burn {
 const approveBuffer: string = "1100";
 
 function useBurn(): Burn {
-  const options: AxiosRequestConfig = {
+  const options: object = {
     headers: {
       'Authorization': 'Bearer ' + oneinchKey,
       'accept': 'application/json'
