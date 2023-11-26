@@ -219,10 +219,12 @@ function useBurn(): Burn {
                   slippage
                 ),
                 false,
-                headers: {
+                {
+                  headers: {
                   'Authorization': 'Bearer ' + oneinchKey
                   'accept': 'application/json'
-                },
+                  }
+                }
               );
             if (oneInchTrade) {
               const sendSnxAmount: BigNumber = BigNumber.from(
