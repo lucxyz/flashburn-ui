@@ -203,11 +203,7 @@ function useBurn(): Burn {
           let searching: boolean = true;
           let searchCount: number = 0;
           let tradeSUSDAmount: BigNumber = sUSDSNXAmountBN;
-          let options: object = { 
-                headers: {
-                  Authorization: 'Bearer ' + oneinchKey
-                }
-              }
+
           while (searching) {
             if (searchCount > 100) {
               throw new Error("Search exceeded allowed iterations.");
@@ -223,7 +219,10 @@ function useBurn(): Burn {
                   slippage
                 ),
                 false,
-                options
+                headers: {
+                  'Authorization': 'Bearer ' + oneinchKey
+                  'accept': 'application/json'
+                },
               );
             if (oneInchTrade) {
               const sendSnxAmount: BigNumber = BigNumber.from(
