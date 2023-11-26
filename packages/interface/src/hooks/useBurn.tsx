@@ -72,7 +72,7 @@ function useBurn(): Burn {
   const options: AxiosRequestConfig = {
     headers:{
       'accept': 'application/json',
-      'Authorization': 'Bearer '+ oneinchKey'
+      'Authorization': 'Bearer '+ oneinchKey
     }
   }
   const toast = useToast();
