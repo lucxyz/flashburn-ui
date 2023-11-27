@@ -30,7 +30,7 @@
     "start": "yarn workspace @snx-flash-tool/interface start",
     "export": "yarn run export:interface"
   },
-  "proxy": "https://api.1inch.dev"
+  "proxy": "https://api.1inch.dev",
   "workspaces": {
     "packages": [
       "packages/*"
