@@ -6,6 +6,7 @@ module.exports = function (app) {
   app.use(createProxyMiddleware("/swap", {
     target: "https://api.1inch.dev/swap",
     changeOrigin: true,
+    logLevel: 'debug',
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
