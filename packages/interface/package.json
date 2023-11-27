@@ -12,7 +12,7 @@
     "typechain": "typechain --target ethers-v5 --out-dir ./src/types/typechain './contracts/*.json'"
   },
   "dependencies": {
-    "http-proxy-middleware": "^2.0.0",
+    "http-proxy-middleware": "^3.0.0",
     "@chakra-ui/icons": "^1.0.14",
     "@chakra-ui/react": "^1.6.5",
     "@emotion/react": "^11",
