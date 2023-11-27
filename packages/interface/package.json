@@ -11,7 +11,6 @@
     "prettier": "prettier --write . --ignore-path .prettierignore",
     "typechain": "typechain --target ethers-v5 --out-dir ./src/types/typechain './contracts/*.json'"
   },
-  "proxy": "https://f79sma9urb.execute-api.eu-north-1.amazonaws.com/default/Proxy",
   "dependencies": {
     "@chakra-ui/icons": "^1.0.14",
     "@chakra-ui/react": "^1.6.5",
