@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/1inchAPI",
-      "destination": "https://api.1inch.dev"
-    }
-  ]
-}
