@@ -1,4 +1,4 @@
-const { createProxyMiddleware } = require("http-proxy-middleware");
+const { createProxyMiddleware } = require("next-http-proxy-middleware");
 // for your API key in .env
 require("dotenv").config();
 
