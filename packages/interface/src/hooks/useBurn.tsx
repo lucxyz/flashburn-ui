@@ -69,14 +69,6 @@ export interface Burn {
 const approveBuffer: string = "1100";
 
 function useBurn(): Burn {
-  const options: AxiosRequestConfig = {
-    headers:{
-      'accept': 'application/json',
-      'Authorization': 'Bearer '+ oneinchKey,
-      "Access-Control-Allow-Origin": "*",
-      'Access-Control-Allow-Credentials': true
-    }
-  }
   const toast = useToast();
   const { provider, chainId, address } = useWeb3React();
   const { balances, synthetixAddresses, fetchBalances } = useSynthetix();
