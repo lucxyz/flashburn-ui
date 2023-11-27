@@ -4,9 +4,9 @@ require("dotenv").config();
 
 module.exports = function (app) {
 
-app.use( "/swap",
+app.use( "/1inchAPI",
 createProxyMiddleware({
-  target: "https://api.1inch.dev/swap",
+  target: "https://api.1inch.dev",
   changeOrigin: true,
   onProxyReq: (proxyReq) => {
     // add API key in Header
