@@ -3,8 +3,6 @@
 const { createProxyMiddleware } = require("http-proxy-middleware");
 // for your API key in .env
 module.exports = function (app) {
-
-
   app.use( "/quote", createProxyMiddleware({
     target: "https://api.1inch.dev",
     changeOrigin: true,
@@ -13,11 +11,10 @@ module.exports = function (app) {
       proxyReq.setHeader(
         "Authorization",
         `Bearer ${process.env.ONEINCH_KEY}`
-        );
-      },
-    })
-   );
-    app.use( "/swap", createProxyMiddleware({
+      );
+    },
+  }));
+  app.use( "/swap", createProxyMiddleware({
     target: "https://api.1inch.dev",
     changeOrigin: true,
     onProxyReq: (proxyReq) => {
@@ -25,8 +22,7 @@ module.exports = function (app) {
       proxyReq.setHeader(
         "Authorization",
         `Bearer ${process.env.ONEINCH_KEY}`
-        );
-      },
-    })
-   );
-  };
+      );
+    },
+  }));
+};
