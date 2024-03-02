@@ -4,7 +4,7 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 // for your API key in .env
 module.exports = function (app) {
 
-app.use( "/v5.0",
+app.use( "/v5.2",
 createProxyMiddleware({
   target: "https://api.1inch.dev",
   changeOrigin: true,
