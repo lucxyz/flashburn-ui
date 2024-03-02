@@ -46,7 +46,7 @@ export function fetchQuoteURL(
   toTokenAddress: string,
   amount: string
 ): string {
-  return `/api/quote/v6.0/${chainId}/src=${fromTokenAddress}&dst=${toTokenAddress}&amount=${amount}`;
+  return `/quote/v6.0/${chainId}/src=${fromTokenAddress}&dst=${toTokenAddress}&amount=${amount}`;
 }
 
 export function fetchSwapURL(
@@ -57,5 +57,5 @@ export function fetchSwapURL(
   amount: string,
   slippage: string
 ): string {
-  return `/api/swap/v6.0/${chainId}/src=${fromTokenAddress}&dst=${toTokenAddress}&amount=${amount}&from=${fromAddress}&slippage=${slippage}&disableEstimate=true`;
+  return `/swap/v6.0/${chainId}/src=${fromTokenAddress}&dst=${toTokenAddress}&amount=${amount}&from=${fromAddress}&slippage=${slippage}&disableEstimate=true`;
 }
