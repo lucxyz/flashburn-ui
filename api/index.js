@@ -1,7 +1,6 @@
 // setupProxy.js
 
 const { createProxyMiddleware } = require("http-proxy-middleware");
-// for your API key in .env
 const oneinchProxy = createProxyMiddleware({
   target: "https://api.1inch.dev",
   changeOrigin: true,
