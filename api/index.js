@@ -33,7 +33,7 @@ function relayRequestHeaders(proxyReq, req) {
 
 function relayResponseHeaders(proxyRes, req, res) {
   Object.keys(proxyRes.headers).forEach(function (key) {
-    res.append(key, proxyRes.headers[key]);
+    proxyRes.setHeader(key, proxyRes.headers[key]);
   });
 }
 export default function(req, res){
