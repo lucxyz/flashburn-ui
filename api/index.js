@@ -14,6 +14,11 @@ const oneinchProxy = createProxyMiddleware({
       "Authorization",
       `Bearer ${process.env.ONEINCH_KEY}`
     );
+    proxyReq.setHeader(
+      "accept",
+      "application/json"
+    );
+      
   },
 });
 export default function(req, res){
