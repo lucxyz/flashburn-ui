@@ -24,4 +24,6 @@ const oneinchProxy = createProxyMiddleware({
       
   },
 });
-
+export default function(req, res){
+  return oneinchProxy(req, res);
+}
