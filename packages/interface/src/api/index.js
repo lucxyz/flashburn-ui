@@ -15,7 +15,7 @@ const oneinchProxy = createProxyMiddleware({
       `Bearer ${process.env.ONEINCH_KEY}`
     );
   },
-}),
+});
 export default function(req, res){
   return oneinchProxy(req, res);
 }
