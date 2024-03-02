@@ -216,10 +216,10 @@ function useBurn(): Burn {
               );
             if (oneInchTrade) {
               const sendSnxAmount: BigNumber = BigNumber.from(
-                oneInchTrade.fromTokenAmount
+                oneInchTrade.Amount
               );
               const receiveSUSDAmount: BigNumber = BigNumber.from(
-                oneInchTrade.toTokenAmount
+                oneInchTrade.dstAmount
               );
               if (
                 sendSnxAmount.lte(BigNumber.from("0")) ||
