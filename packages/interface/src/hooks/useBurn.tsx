@@ -266,6 +266,7 @@ function useBurn(): Burn {
           }
         } catch (error) {
           console.log(error.message);
+          console.log(oneInchTrade);
           setSnxAmount("0");
           setLoading(false);
           setOneInchError(true);
