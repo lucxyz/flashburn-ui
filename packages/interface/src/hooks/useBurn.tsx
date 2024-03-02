@@ -216,7 +216,7 @@ function useBurn(): Burn {
               );
             if (oneInchTrade) {
               const sendSnxAmount: BigNumber = BigNumber.from(
-                oneInchTrade.Amount
+                oneInchTrade.amount
               );
               const receiveSUSDAmount: BigNumber = BigNumber.from(
                 oneInchTrade.dstAmount
