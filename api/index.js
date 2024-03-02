@@ -6,10 +6,18 @@ const oneinchProxy = createProxyMiddleware({
   target: "https://api.1inch.dev",
   changeOrigin: true,
   cookieDomainRewrite: 'localhost',
-  onProxyReq: relayRequestHeaders,
-  onProxyRes: relayResponseHeaders,
+  //onProxyReq: relayRequestHeaders,
+  //onProxyRes: relayResponseHeaders,
   pathRewrite: {
     "^/api": "",
+  },
+  onProxyRes: function(proxyRes, req, res) {
+    if (proxyRes.headers["set-cookie"] !== undefined) {
+      proxyRes.headers["set-cookie"] = proxyRes.headers[
+        "set-cookie"
+        ][0].replace("Secure; ", ""); // JSESSIONID cookie cannot be set thru proxy with Secure
+      return proxyRes;
+    }
   },
   onProxyReq: (proxyReq) => {
     // add API key in Header
@@ -25,17 +33,4 @@ const oneinchProxy = createProxyMiddleware({
       
   },
 });
-function relayRequestHeaders(proxyReq, req) {
-  Object.keys(req.headers).forEach(function (key) {
-    proxyReq.setHeader(key, req.headers[key]);
-  });
-}
 
-function relayResponseHeaders(proxyRes, req, res) {
-  Object.keys(proxyRes.headers).forEach(function (key) {
-    res.setHeader(key, proxyRes.headers[key]);
-  });
-}
-export default function(req, res){
-  return oneinchProxy(req, res);
-}
