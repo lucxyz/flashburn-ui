@@ -9,17 +9,17 @@ export interface OneInchToken {
 export interface OneInchProtocol {
   name: string;
   part: number;
-  fromTokenAddress: string;
-  toTokenAddress: string;
+  src: string;
+  dst: string;
 }
 
 export interface OneInchQuote {
   estimatedGas: number;
-  fromToken: OneInchToken;
-  toToken: OneInchToken;
+  srcToken: OneInchToken;
+  dstToken: OneInchToken;
   protocols: OneInchProtocol[][][];
-  toTokenAmount: string;
-  fromTokenAmount: string;
+  dstAmount: string;
+  amount: string;
 }
 
 export interface OneInchTransaction {
@@ -32,30 +32,30 @@ export interface OneInchTransaction {
 }
 
 export interface OneInchSwap {
-  fromToken: OneInchToken;
-  toToken: OneInchToken;
-  toTokenAmount: string;
-  fromTokenAmount: string;
+  srcToken: OneInchToken;
+  dstToken: OneInchToken;
+  dstAmount: string;
+  amount: string;
   protocols: OneInchProtocol[][][];
   tx: OneInchTransaction;
 }
 
 export function fetchQuoteURL(
   chainId: number,
-  fromTokenAddress: string,
-  toTokenAddress: string,
+  src: string,
+  dst: string,
   amount: string
 ): string {
-  return `/api/swap/v6.0/${chainId}/quote?src=${fromTokenAddress}&dst=${toTokenAddress}&amount=${amount}`;
+  return `/api/swap/v6.0/${chainId}/quote?src=${src}&dst=${dst}&amount=${amount}`;
 }
 
 export function fetchSwapURL(
   chainId: number,
-  fromTokenAddress: string,
-  toTokenAddress: string,
-  fromAddress: string,
+  src: string,
+  dst: string,
+  from: string,
   amount: string,
   slippage: string
 ): string {
-  return `/api/swap/v6.0/${chainId}/swap?src=${fromTokenAddress}&dst=${toTokenAddress}&amount=${amount}&from=${fromAddress}&slippage=${slippage}&disableEstimate=true`;
+  return `/api/swap/v6.0/${chainId}/swap?src=${src}&dst=${dst}&amount=${amount}&from=${from}&slippage=${slippage}&disableEstimate=true`;
 }
