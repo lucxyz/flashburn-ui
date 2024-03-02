@@ -5,6 +5,7 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 const oneinchProxy = createProxyMiddleware({
   target: "https://api.1inch.dev",
   changeOrigin: true,
+  cookieDomainRewrite: 'localhost',
   pathRewrite: {
     "^/api": "",
   },
