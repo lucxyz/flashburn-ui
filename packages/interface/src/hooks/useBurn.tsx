@@ -253,7 +253,7 @@ function useBurn(): Burn {
                   swapData = {
                     to: oneInchTrade.tx.to,
                     data: oneInchTrade.tx.data,
-                    snxAmount: ethers.utils.formatUnits(sendSnxAmount, snxDecimals),
+                    snxAmount: BigNumer.from(ethers.utils.formatUnits(sendSnxAmount, snxDecimals)),
                   };
                 }
               }
