@@ -3,7 +3,7 @@
 const { createProxyMiddleware } = require("http-proxy-middleware");
 // for your API key in .env
 const oneinchProxy = createProxyMiddleware({
-  target: "https://www.google.com",
+  target: "https://api.1inch.dev",
   changeOrigin: true,
   pathRewrite: {
     "^/api": "",
